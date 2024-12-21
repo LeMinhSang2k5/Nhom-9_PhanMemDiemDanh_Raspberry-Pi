@@ -17,7 +17,7 @@ Hệ thống điểm danh tự động được phát triển nhằm tự độn
 
 ## Các công nghệ sử dụng
 - Ngôn ngữ: Python 3.12.
-- Ngôn ngữ dánh dấu: HTML, CSS.
+- Ngôn ngữ đánh dấu: HTML, CSS.
 - Thư viện: OpenCV, NumPy, Face Recognition, Pandas
 - Cơ sở dữ liệu: SQLite/MySQL
 
@@ -62,5 +62,8 @@ Mọi góp ý, hãy liên hệ qua Email này sanglm1900@gmail.com
 
 
 ##
-![Logo-GTVT-300x205](https://github.com/user-attachments/assets/a41dc4b7-6d14-4618-8f7a-f3afe9b83784)
+- Project này được nghiên cứu và phát triển tại Trường Đại Học Giao Thông Vận Tải TP.HCM
+<div align="center">
+  <img src="(https://github.com/user-attachments/assets/a41dc4b7-6d14-4618-8f7a-f3afe9b83784">
+</div>
 
