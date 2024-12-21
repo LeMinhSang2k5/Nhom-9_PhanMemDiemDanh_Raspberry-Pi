@@ -1,33 +1,24 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Trang test</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div style="width: 1280px; height: 832px; position: relative; background: white">
-            <img style="width: 1280px; height: 832px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/1280x832" />
-            <div style="width: 441px; height: 832px; left: 57px; top: 0px; position: absolute; background: rgba(55, 137, 202, 0.86)"></div>
-            <div style="width: 252px; height: 72px; left: 151px; top: 142px; position: absolute; color: rgba(255, 255, 255, 0.98); font-size: 48px; font-family: Noto Sans Devanagari UI ExtraCondensed; font-weight: 400; word-wrap: break-word">Đăng nhập</div>
-            <div style="width: 331px; height: 57px; left: 112px; top: 352px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-            <div style="width: 331px; height: 57px; left: 112px; top: 478px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-            <div style="width: 237px; height: 57px; left: 159px; top: 594px; position: absolute; background: white; border-radius: 20px; border: 1px black solid"></div>
-            <div style="width: 127px; height: 29px; left: 113px; top: 315px; position: absolute; color: white; font-size: 15px; font-family: Mandali; font-weight: 400; word-wrap: break-word">Tên đăng nhập</div>
-            <div style="width: 127px; height: 29px; left: 113px; top: 442px; position: absolute; color: white; font-size: 15px; font-family: Mandali; font-weight: 400; word-wrap: break-word">Mật khẩu</div>
-            <div style="width: 128px; height: 29px; left: 213px; top: 604px; position: absolute; color: black; font-size: 20px; font-family: Mandali; font-weight: 400; word-wrap: break-word">ĐĂNG NHẬP</div>
-            <div style="width: 211px; height: 29px; left: 171px; top: 207px; position: absolute; color: white; font-size: 20px; font-family: Mandali; font-weight: 400; word-wrap: break-word">Đăng nhập để tiếp tục</div>
-          </div>
-        <script src="" async defer></script>
-    </body>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+  <img class="background-image" src="{% static 'images/home.png' %}" alt="Background Image">
+  <div class="login-panel">
+    <div class="title">Đăng nhập</div>
+    <div class="subtitle">Đăng nhập để tiếp tục</div>
+    <label for="username" class="input-label">Tên đăng nhập</label>
+    <input type="text" id="username" class="input-box" placeholder="Nhập tên đăng nhập">
+    <label for="password" class="input-label">Mật khẩu</label>
+    <input type="password" id="password" class="input-box" placeholder="Nhập mật khẩu">
+    <button class="login-button">ĐĂNG NHẬP</button>
+  </div>
+  </div>
+</body>
 </html>
