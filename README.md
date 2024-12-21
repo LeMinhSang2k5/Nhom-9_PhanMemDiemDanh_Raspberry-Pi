@@ -33,9 +33,9 @@ Django
 
 ## Cách tải project về máy 
 - Để clone repository ta cần thực hiện câu lệnh này ở Temial
-  ```bash
- git clone https://github.com/LeMinhSang2k5/Nhom-9_PhanMemDiemDanh_Raspberry-Pi.git
-  ```bash
+```bash
+    git clone https://github.com/LeMinhSang2k5/Nhom-9_PhanMemDiemDanh_Raspberry-Pi.git
+ ```
 
 
 ## Cài đặt phần cứng (nếu sử dụng Raspberry Pi)
