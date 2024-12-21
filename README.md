@@ -61,11 +61,7 @@ Django
 Mọi góp ý, hãy liên hệ qua Email này sanglm1900@gmail.com
 
 
-##
-![Logo-GTVT-300x205](https://github.com/user-attachments/assets/a41dc4b7-6d14-4618-8f7a-f3afe9b83784)
-
-- Project này được nghiên cứu và phát triển tại Trường Đại Học Giao Thông Vận Tải TP.HCM
-
+## Project này được nghiên cứu và phát triển tại Trường Đại Học Giao Thông Vận Tải TP.HCM
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a41dc4b7-6d14-4618-8f7a-f3afe9b83784" alt="Logo-GTVT-300x205" width="300"/>
 </p>
