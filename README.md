@@ -31,8 +31,11 @@ Django
   pip install Django
 ```
 
-
-
+## Cách tải project về máy 
+- Để clone repository ta cần thực hiện câu lệnh này ở Temial
+  ```bash
+ git clone https://github.com/LeMinhSang2k5/Nhom-9_PhanMemDiemDanh_Raspberry-Pi.git
+  ```bash
 
 
 ## Cài đặt phần cứng (nếu sử dụng Raspberry Pi)
@@ -54,8 +57,8 @@ Django
 - Project này được đóng góp bởi những người sau đây
 - [@LeMinhSang](https://github.com/LeMinhSang2k5)
 - [@NguyenHoaiLinh](https://github.com/linh0526)
-
-
+- [@MinhKhang](https://github.com/MinhKhangVN)
+- [@TanPhat2108](https://github.com/tanphat2108)
 ## Liên Hệ
 
 Mọi góp ý, hãy liên hệ qua Email này sanglm1900@gmail.com
