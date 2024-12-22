@@ -57,8 +57,11 @@ Django
 - Project này được đóng góp bởi những người sau đây
 - [@LeMinhSang](https://github.com/LeMinhSang2k5)
 - [@NguyenHoaiLinh](https://github.com/linh0526)
-- [@MinhKhang](https://github.com/MinhKhangVN)
-- [@TanPhat2108](https://github.com/tanphat2108)
+- [@TrinhMinhKhang](https://github.com/MinhKhangVN)
+- [@KhuuTanPhat](https://github.com/tanphat2108)
+- [@LeHoanToan](https://github.com/lehoangtoan)
+- [@NguyenCaoKyDuyen](https://github.com/KyDuyen09)
+- [@LeMinhNhut](https://github.com/minhut205)
 ## Liên Hệ
 
 Mọi góp ý, hãy liên hệ qua Email này sanglm1900@gmail.com
