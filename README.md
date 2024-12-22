@@ -31,13 +31,13 @@ Django
   pip install Django
 ```
 
-## Cách tải project về máy 
-- Để clone repository ta cần thực hiện câu lệnh này ở Temial
+## Làm thế nảo để tải project về máy ?
+- Để cần clone project này ta cần đảm bảo đã tải git.
+- Bước 1: Vào Visual Studio Code tạo một thư mục trống để chứa project
+- Bước 2: clone repository ta cần thực hiện câu lệnh này ở Teminal
 ```bash
     git clone https://github.com/LeMinhSang2k5/Nhom-9_PhanMemDiemDanh_Raspberry-Pi.git
  ```
-
-
 ## Cài đặt phần cứng (nếu sử dụng Raspberry Pi)
 
 - Kết nối camera và Raspberry Pi theo hướng dẫn.
