@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home/assets/css/styles.css' %}">
+  <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<style>
+body {
+      background-image: url("{% static 'home/assets/img/background/home_bg.jpg' %}");
+    }
+</style>
+<body>
+  <div class="warpper">
+    <!------------------- login form -------------------------->
+    <div class="login-container" id="login">
+      <header>Dang nhap</header>
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="Ten dang nhap" />
+        <i class="bx bx-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" class="input-field" placeholder="Mat khau" />
+        <i class="bx bx-lock-alt"></i>
+      </div>
+      <div class="input-box">
+        <input type="submit" class="submit" value="Dang nhap" />
+      </div>
+      <div class="one">
+        <input type="checkbox" id="login-check" />
+        <label for="login-check"> remember me</label>
+      </div>
+    </div>
+    <!------------------- login form -------------------------->
+  </div>
+</body>
+</html>
