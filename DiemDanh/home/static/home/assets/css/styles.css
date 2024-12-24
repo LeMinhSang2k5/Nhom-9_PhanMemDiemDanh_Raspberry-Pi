@@ -23,11 +23,11 @@ header {
 }
 
 .login-container {
-  margin: 25px 50px 75px 100px;
+  margin: 155px 1px 200px 163px;
   position: absolute;
   left: 50px;
   width: 429px;
-  min-height: 668px;
+  min-height: 600px;
   display: flex;
   backdrop-filter: blur(20px);
   padding: 30px 40px;
