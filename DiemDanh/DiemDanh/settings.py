@@ -78,7 +78,11 @@ WSGI_APPLICATION = 'DiemDanh.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
+<<<<<<< HEAD
         "NAME": "diemdanh",
+=======
+        "NAME": "DiemDanh",
+>>>>>>> b3d17b3 (Lưu lại thay đổi trước khi pull)
         "USER": "root",
         "PASSWORD": "123456",
         "HOST": "localhost",
