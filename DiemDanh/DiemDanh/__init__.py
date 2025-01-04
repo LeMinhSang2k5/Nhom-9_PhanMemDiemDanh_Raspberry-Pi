@@ -1,2 +1,2 @@
 import pymysql
-pymysql.install_as_MYSQLdb()
+pymysql.install_as_MySQLdb()
