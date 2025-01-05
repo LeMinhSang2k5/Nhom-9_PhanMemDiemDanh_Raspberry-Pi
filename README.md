@@ -25,10 +25,23 @@ Hệ thống điểm danh tự động được phát triển nhằm tự độn
 
 ## Các thư viện yêu cầu
 
-Django
+asgiref (3.8.1)
+Django (5.1.4)
+PyMySQL (1.1.1)
+sqlparse (0.5.3)
+
+- Q: Làm thế nào để cài đặt những thư viện này nhanh nhất ?
+- A: Rất đơn giản hãy cài đặt những thư viện thông qua file requirements.txt trong project này
 
 ```bash
-  pip install Django
+  pip install -r requirements.txt
+```
+- Lưu ý: ta cần cập nhật pip thông qua python venv để tăng sự hiểu quả
+- Q: Nếu tôi có thử tải những thư viện về và muốn thêm vào requirements.txt để cho các thành viên thì ta nên làm gì ?
+- A: Ta cần dùng lệnh cd vào thư mục cần tìm thư viện sau đó thử lệnh này
+  
+```bash
+  pip freeze
 ```
 
 ## Làm thế nảo để tải project về máy ?
