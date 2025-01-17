@@ -1,11 +1,22 @@
 {%extends "masterPage.html" %}
 
+
+
+{%block menu %}
+    {%include "../includes/leftMenu.html" %}
+{%endblock%}
+
+
 {% block navBar %}
     {%include "../includes/navBar.html" %}
 {% endblock %}
 
 
-
 {%block content%}
-
+    {%include "../includes/content.html" %}
 {%endblock%}
+
+
+{% block footer %}
+    {%include "../includes/footer.html" %}
+{% endblock %}
