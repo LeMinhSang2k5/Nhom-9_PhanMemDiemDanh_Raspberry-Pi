@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
 def get_home(request):
     return render(request, 'home/index.html')
 
 def get_login(request):
+
     # if request.user.is_authenticated:
     #     return redirect('home')
     # if request.method == "POST":
