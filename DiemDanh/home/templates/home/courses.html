@@ -1,0 +1,108 @@
+{%extends "masterPage.html" %}
+
+{%block title%}
+    Courses UTH
+{%endblock%}
+
+
+{%block menu %}
+    
+{%endblock%}
+
+
+{% block navBar %}
+
+{% endblock %}
+
+
+{%block content%}
+<div class="layout-page window-scrolled">
+  <div class="col-xl-4 col-lg-5 col-md-5">
+        <!-- About Userprofile -->
+      <div class="card mb-6">
+          <div class="card-body">
+            <small class="card-text text-uppercase text-body-secondary small">About</small>
+            <ul class="list-unstyled my-3 py-1">
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-user"></i><span class="fw-medium mx-2">Full Name:</span> <span>John Doe</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-check"></i><span class="fw-medium mx-2">Status:</span> <span>Active</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-crown"></i><span class="fw-medium mx-2">Role:</span> <span>Developer</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-flag"></i><span class="fw-medium mx-2">Country:</span> <span>USA</span></li>
+              <li class="d-flex align-items-center mb-2"><i class="icon-base bx bx-detail"></i><span class="fw-medium mx-2">Languages:</span> <span>English</span></li>
+            </ul>
+            <small class="card-text text-uppercase text-body-secondary small">Contacts</small>
+            <ul class="list-unstyled my-3 py-1">
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Contact:</span> <span>(123) 456-7890</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-chat"></i><span class="fw-medium mx-2">Skype:</span> <span>john.doe</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-envelope"></i><span class="fw-medium mx-2">Email:</span> <span>john.doe@example.com</span></li>
+            </ul>
+            <small class="card-text text-uppercase text-body-secondary small">Teams</small>
+            <ul class="list-unstyled mb-0 mt-3 pt-1">
+              <li class="d-flex flex-wrap mb-4"><span class="fw-medium me-2">Backend Developer</span><span>(126 Members)</span></li>
+              <li class="d-flex flex-wrap"><span class="fw-medium me-2">React Developer</span><span>(98 Members)</span></li>
+            </ul>
+          </div>
+      </div>
+
+    <!-- Calendar -->
+      <div class="card mb-6">
+          <div class="col app-calendar-sidebar border-end" id="app-calendar-sidebar">
+              <div class="border-bottom p-6 my-sm-0 mb-4">
+                <button class="btn btn-primary btn-toggle-sidebar w-100" data-bs-toggle="offcanvas" data-bs-target="#addEventSidebar" aria-controls="addEventSidebar">
+                  <i class="icon-base bx bx-plus icon-16px me-2"></i>
+                  <span class="align-middle">Add Event</span>
+                </button>
+              </div>
+              <div class="px-3 pt-2">
+                <!-- inline calendar (flatpicker) -->
+                <div class="flatpickr-wrapper"><div class="inline-calendar flatpickr-input" readonly="readonly"></div><div class="flatpickr-calendar animate inline" tabindex="-1"><div class="flatpickr-months"><span class="flatpickr-prev-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></span><div class="flatpickr-month"><div class="flatpickr-current-month"><span class="cur-month">January </span><div class="numInputWrapper"><input class="numInput cur-year" type="number" tabindex="-1" aria-label="Year"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div><span class="flatpickr-next-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></span></div><div class="flatpickr-innerContainer"><div class="flatpickr-rContainer"><div class="flatpickr-weekdays"><div class="flatpickr-weekdaycontainer">
+            <span class="flatpickr-weekday">
+              Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
+            </span>
+            </div></div><div class="flatpickr-days" tabindex="-1"><div class="dayContainer"><span class="flatpickr-day prevMonthDay" aria-label="December 29, 2024" tabindex="-1">29</span><span class="flatpickr-day prevMonthDay" aria-label="December 30, 2024" tabindex="-1">30</span><span class="flatpickr-day prevMonthDay" aria-label="December 31, 2024" tabindex="-1">31</span><span class="flatpickr-day" aria-label="January 1, 2025" tabindex="-1">1</span><span class="flatpickr-day" aria-label="January 2, 2025" tabindex="-1">2</span><span class="flatpickr-day" aria-label="January 3, 2025" tabindex="-1">3</span><span class="flatpickr-day" aria-label="January 4, 2025" tabindex="-1">4</span><span class="flatpickr-day" aria-label="January 5, 2025" tabindex="-1">5</span><span class="flatpickr-day" aria-label="January 6, 2025" tabindex="-1">6</span><span class="flatpickr-day" aria-label="January 7, 2025" tabindex="-1">7</span><span class="flatpickr-day" aria-label="January 8, 2025" tabindex="-1">8</span><span class="flatpickr-day" aria-label="January 9, 2025" tabindex="-1">9</span><span class="flatpickr-day" aria-label="January 10, 2025" tabindex="-1">10</span><span class="flatpickr-day" aria-label="January 11, 2025" tabindex="-1">11</span><span class="flatpickr-day" aria-label="January 12, 2025" tabindex="-1">12</span><span class="flatpickr-day" aria-label="January 13, 2025" tabindex="-1">13</span><span class="flatpickr-day" aria-label="January 14, 2025" tabindex="-1">14</span><span class="flatpickr-day" aria-label="January 15, 2025" tabindex="-1">15</span><span class="flatpickr-day" aria-label="January 16, 2025" tabindex="-1">16</span><span class="flatpickr-day today" aria-label="January 17, 2025" aria-current="date" tabindex="-1">17</span><span class="flatpickr-day" aria-label="January 18, 2025" tabindex="-1">18</span><span class="flatpickr-day" aria-label="January 19, 2025" tabindex="-1">19</span><span class="flatpickr-day" aria-label="January 20, 2025" tabindex="-1">20</span><span class="flatpickr-day" aria-label="January 21, 2025" tabindex="-1">21</span><span class="flatpickr-day" aria-label="January 22, 2025" tabindex="-1">22</span><span class="flatpickr-day" aria-label="January 23, 2025" tabindex="-1">23</span><span class="flatpickr-day" aria-label="January 24, 2025" tabindex="-1">24</span><span class="flatpickr-day" aria-label="January 25, 2025" tabindex="-1">25</span><span class="flatpickr-day" aria-label="January 26, 2025" tabindex="-1">26</span><span class="flatpickr-day" aria-label="January 27, 2025" tabindex="-1">27</span><span class="flatpickr-day" aria-label="January 28, 2025" tabindex="-1">28</span><span class="flatpickr-day" aria-label="January 29, 2025" tabindex="-1">29</span><span class="flatpickr-day" aria-label="January 30, 2025" tabindex="-1">30</span><span class="flatpickr-day" aria-label="January 31, 2025" tabindex="-1">31</span><span class="flatpickr-day nextMonthDay" aria-label="February 1, 2025" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="February 2, 2025" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="February 3, 2025" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="February 4, 2025" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="February 5, 2025" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="February 6, 2025" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="February 7, 2025" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="February 8, 2025" tabindex="-1">8</span></div></div></div></div></div></div>
+              </div>
+              <hr class="mb-6 mx-n4 mt-3">
+              <div class="px-6 pb-2">
+                <!-- Filter -->
+                <div>
+                  <h5>Event Filters</h5>
+                </div>
+
+                <div class="form-check form-check-secondary mb-5 ms-2">
+                  <input class="form-check-input select-all" type="checkbox" id="selectAll" data-value="all" checked="">
+                  <label class="form-check-label" for="selectAll">View All</label>
+                </div>
+
+                <div class="app-calendar-events-filter text-heading">
+                  <div class="form-check form-check-danger mb-5 ms-2">
+                    <input class="form-check-input input-filter" type="checkbox" id="select-personal" data-value="personal" checked="">
+                    <label class="form-check-label" for="select-personal">Personal</label>
+                  </div>
+                  <div class="form-check mb-5 ms-2">
+                    <input class="form-check-input input-filter" type="checkbox" id="select-business" data-value="business" checked="">
+                    <label class="form-check-label" for="select-business">Business</label>
+                  </div>
+                  <div class="form-check form-check-warning mb-5 ms-2">
+                    <input class="form-check-input input-filter" type="checkbox" id="select-family" data-value="family" checked="">
+                    <label class="form-check-label" for="select-family">Family</label>
+                  </div>
+                  <div class="form-check form-check-success mb-5 ms-2">
+                    <input class="form-check-input input-filter" type="checkbox" id="select-holiday" data-value="holiday" checked="">
+                    <label class="form-check-label" for="select-holiday">Holiday</label>
+                  </div>
+                  <div class="form-check form-check-info ms-2">
+                    <input class="form-check-input input-filter" type="checkbox" id="select-etc" data-value="etc" checked="">
+                    <label class="form-check-label" for="select-etc">ETC</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+  {%endblock%}
+
+
+
+  {% block footer %}
+    {%include "../includes/footer.html" %}
+{% endblock %}

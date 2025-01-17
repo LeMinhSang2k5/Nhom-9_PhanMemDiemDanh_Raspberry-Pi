@@ -6,16 +6,19 @@ from django.contrib import messages
 def get_home(request):
     return render(request, 'home/index.html')
 
-# def loginPage(request):
-#     if request.user.is_authenticated:
-#         return redirect('home')
-#     if request.method == "POST":
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-#         user = authenticate(request, username=username, password=password)
-#     if user is not None:
-#         login(request, user)
-#         return redirect('home')
-#     else: messages.info(request, 'Username or password is incorrect')
-#     context = {}
-#     return render(request, 'loginPage.html', context)
+def get_login(request):
+    # if request.user.is_authenticated:
+    #     return redirect('home')
+    # if request.method == "POST":
+    #     username = request.POST.get('username')
+    #     password = request.POST.get('password')
+    #     user = authenticate(request, username=username, password=password)
+    # if user is not None:
+    #     login(request, user)
+    #     return redirect('home')
+    # else: messages.info(request, 'Username or password is incorrect')
+    # context = {}
+    return render(request, 'home/loginPage.html')
+
+def get_course(request):
+    return render(request, 'home/courses.html')

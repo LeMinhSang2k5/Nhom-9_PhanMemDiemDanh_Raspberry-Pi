@@ -11,13 +11,14 @@
   data-assets-path="{% static 'home/assets/' %}"
   data-template="vertical-menu-template-free"
   data-style="light">
+
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Demo : Courses Diem Danh PRO</title>
+    <title>{% block title %} {% endblock %} </title>
 
     <meta name="description" content="" />
     <link rel="stylesheet" href="{% static 'home/assets/css/styles.css' %}">
@@ -26,7 +27,7 @@
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"/>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{% static 'home/assets/img/favicon/favicon.ico' %}" />
+    <link rel="icon" type="image/x-icon" href="https://gtvthcm.edu.vn/wp-content/uploads/2024/04/Logo-GTVT.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,7 +69,7 @@
         <!-- / Menu -->
 
         <!-- Layout container -->
-        <div class="layout-page">
+        <div class="layout-page window-scrolled">
           <!-- Navbar -->
 
             {% block navbar %}
