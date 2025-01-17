@@ -23,15 +23,16 @@ header {
 }
 
 .login-container {
-  margin: 155px 1px 200px 163px;
+  margin: 100px 100px 100px 200px;
   position: absolute;
-  left: 50px;
+  min-height: 60vh;
   width: 429px;
-  min-height: 600px;
   display: flex;
+  justify-content: center;
   backdrop-filter: blur(20px);
   padding: 30px 40px;
   background: transparent;
+  
   border:2px solid rgba(255,255,255,0.3);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.2);
@@ -64,6 +65,7 @@ header {
   left: 17px;
   color: #ffffff;
 }
+
 .submit {
   font-size: 15px;
   font-weight: 500;
