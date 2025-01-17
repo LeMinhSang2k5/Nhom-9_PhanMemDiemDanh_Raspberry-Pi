@@ -3,8 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 
 # Create your views here.
-def get_loginPage(request):
-    return render(request, 'home/loginPage.html')
+def get_home(request):
+    return render(request, 'home.html')
 
 def loginPage(request):
     if request.user.is_authenticated:
@@ -18,4 +18,4 @@ def loginPage(request):
         return redirect('home')
     else: messages.info(request, 'Username or password is incorrect')
     context = {}
-    return render(request, 'home/loginPage.html', context)
+    return render(request, 'loginPage.html', context)
