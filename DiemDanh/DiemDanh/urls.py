@@ -18,8 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from home import views as home
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # path('', home.get_home, name='home'),
+    # path('login/', home.get_login, name='login'),
+    # path('courses/', home.get_course, name='courses'),
+
+  
     path('admin/', admin.site.urls),
-    path('', home.get_home, name='home'),
-    path('login/', home.get_login, name='login'),
+    path('', home.loginPage, name='login'),
+    path('home/', home.get_home, name='home'),
     path('courses/', home.get_course, name='courses'),
 ]
