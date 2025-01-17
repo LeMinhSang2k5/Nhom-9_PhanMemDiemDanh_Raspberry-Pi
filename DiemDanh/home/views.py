@@ -8,19 +8,23 @@ from django.template import loader
 def get_home(request):
     return render(request, 'home/index.html')
 
-def get_login(request):
+def loginPage(request):
+    if request.method == 'POST':
+        username = request.POST.get('un')
+        password = request.POST.get('pw')
 
-    # if request.user.is_authenticated:
-    #     return redirect('home')
-    # if request.method == "POST":
-    #     username = request.POST.get('username')
-    #     password = request.POST.get('password')
-    #     user = authenticate(request, username=username, password=password)
-    # if user is not None:
-    #     login(request, user)
-    #     return redirect('home')
-    # else: messages.info(request, 'Username or password is incorrect')
-    # context = {}
+        if username and password:
+            user = authenticate(request, username=username, password=password)
+            
+            if user is not None:
+                login(request, user)
+                next_url = request.GET.get('next', 'home') 
+                return redirect(next_url)
+            else:
+                messages.error(request, 'Tên đăng nhập hoặc mật khẩu không đúng')
+        else:
+            messages.error(request, 'Vui lòng nhập đầy đủ thông tin')
+
     return render(request, 'home/loginPage.html')
 
 def get_course(request):

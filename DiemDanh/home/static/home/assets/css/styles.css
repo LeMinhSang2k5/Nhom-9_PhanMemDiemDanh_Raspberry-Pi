@@ -90,3 +90,8 @@ header {
   font-size: small;
   margin-top: 10px;
 }
+.messages {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
