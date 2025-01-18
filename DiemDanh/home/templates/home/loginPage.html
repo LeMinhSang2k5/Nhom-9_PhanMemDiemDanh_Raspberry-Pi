@@ -20,11 +20,12 @@
       href="https://gtvthcm.edu.vn/wp-content/uploads/2024/04/Logo-GTVT.png"
     />
   </head>
-  <body
-    style="
-      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/038/996/793/small_2x/ai-generated-a-tranquil-japanese-garden-adorned-with-cherry-blossoms-fantasy-landscape-anime-or-cartoon-style-seamless-looping-4k-time-lapse-virtual-animation-background-video.jpg');
-    "
-  >
+  <body style="background-image: url('{% static 'home/assets/img/home_bg.jpg' %}'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;">
+      
     <form method="POST" class="wrapper">
       {% csrf_token %}
       <!------------------- login form -------------------------->
