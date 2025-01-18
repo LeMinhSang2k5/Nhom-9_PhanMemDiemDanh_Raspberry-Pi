@@ -37,7 +37,7 @@
   .content-wrapper .navbar {
     z-index: auto;
   }
-  
+
   /*
   * Content
   ******************************************************************************/
@@ -123,3 +123,8 @@
     margin-top: 1rem;
   }
   
+  .layout-page {
+    height: 100vh;
+    margin-top: 12px;
+    overflow: scroll;
+  }

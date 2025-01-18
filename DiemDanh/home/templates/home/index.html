@@ -1,22 +1,45 @@
 {%extends "masterPage.html" %}
 
+<!-- title -->
 
-
-{%block menu %}
-    {%include "../includes/leftMenu.html" %}
+{%block title%}
+    Courses UTH
 {%endblock%}
 
+<!-- MENU -->
 
-{% block navBar %}
-    {%include "../includes/navBar.html" %}
-{% endblock %}
-
-
-{%block content%}
-    {%include "../includes/content.html" %}
+<!-- Dashboards -->
+{% block menuDashboards %} {%include '../includes/leftmenu/dashboards.html'%}
 {%endblock%}
 
+<!-- Layouts -->
 
-{% block footer %}
-    {%include "../includes/footer.html" %}
-{% endblock %}
+{% block layouts %} {%include '../includes/leftmenu/layouts.html'%} {%endblock%}
+
+<!-- Front Pages -->
+
+{% block frontPages %} {%include '../includes/leftmenu/dashboards.html'%}
+{%endblock%}
+<!-- Apps & Pages -->
+
+{% block appAndPg %} {%include '../includes/leftmenu/appAndPg.html'%}
+{%endblock%}
+
+<!-- Components -->
+
+{% block components %} {%include '../includes/leftmenu/components.html'%}
+{%endblock%}
+
+<!-- Forms & Tables -->
+
+{% block formAndTb %} {%include '../includes/leftmenu/formAndTb.html'%}
+{%endblock%}
+<!-- Misc -->
+
+{% block Misc %} {%include '../includes/leftmenu/misc.html'%} {% endblock %}
+
+<!-- NAVBAR -->
+{%block user %} {%include "../includes/navbar/user.html" %} {% endblock %}
+{%block search %} {%include "../includes/navbar/search.html" %} {% endblock %}
+{%block content%} {%include "../includes/content.html" %} {% endblock %}
+{%block footer%} {%include "../includes/footer.html" %} {% endblock %}

@@ -1,81 +1,87 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng nhập</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'home/assets/css/styles.css' %}">
-    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/assets/css/styles.css' %}" />
     <link
-        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet"/>
-        <link rel="icon" type="image/x-icon" href="https://gtvthcm.edu.vn/wp-content/uploads/2024/04/Logo-GTVT.png" />
-    
-</head>
-<style>
-body {
-      background-image: url("{% static 'home/assets/img/background/home_bg.jpg' %}");
-    }
-</style>
-<body>
-  <form method="POST" class="wrapper">
-    {% csrf_token %}
-    <!------------------- login form -------------------------->
-    <div class="login-container" id="login">
-      <header>Đăng nhập</header>
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://gtvthcm.edu.vn/wp-content/uploads/2024/04/Logo-GTVT.png"
+    />
+  </head>
+  <body
+    style="
+      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/038/996/793/small_2x/ai-generated-a-tranquil-japanese-garden-adorned-with-cherry-blossoms-fantasy-landscape-anime-or-cartoon-style-seamless-looping-4k-time-lapse-virtual-animation-background-video.jpg');
+    "
+  >
+    <form method="POST" class="wrapper">
+      {% csrf_token %}
+      <!------------------- login form -------------------------->
+      <div class="login-container" id="login">
+        <header>Đăng nhập</header>
 
-      <div class="input-box">
-        <input
-          type="text"
-          class="input-field"
-          id="un"
-          name="un"
-          placeholder="Tên đăng nhập"
-          required
-          autofocus
-        />
-        <i class="bx bx-user"></i>
-      </div>
+        <div class="input-box">
+          <input
+            type="text"
+            class="input-field"
+            id="un"
+            name="un"
+            placeholder="Tên đăng nhập"
+            required
+            autofocus
+          />
+          <i class="bx bx-user"></i>
+        </div>
 
-      <div class="input-box">
-        <input
-          type="password"
-          class="input-field"
-          id="pw"
-          name="pw"
-          placeholder="Mật khẩu"
-          required
-          autocomplete="off"
-        />
-        <i class="bx bx-lock-alt"></i>
-      </div>
+        <div class="input-box">
+          <input
+            type="password"
+            class="input-field"
+            id="pw"
+            name="pw"
+            placeholder="Mật khẩu"
+            required
+            autocomplete="off"
+          />
+          <i class="bx bx-lock-alt"></i>
+        </div>
 
-      <div class="input-box">
-        <input
-          type="submit"
-          id="btndangnhap"
-          name="btndangnhap"
-          class="submit"
-          value="Đăng nhập"
-        />
-      </div>
+        <div class="input-box">
+          <input
+            type="submit"
+            id="btndangnhap"
+            name="btndangnhap"
+            class="submit"
+            value="Đăng nhập"
+          />
+        </div>
 
-      <div class="one">
-        <input type="checkbox" id="login-check" />
-        <label for="login-check">Lưu thông tin</label>
-      </div>
+        <div class="one">
+          <input type="checkbox" id="login-check" />
+          <label for="login-check">Lưu thông tin</label>
+        </div>
 
-      {% if messages %}
-      <div class="messages">
-        {% for message in messages %}
-        <p>{{ message }}</p>
-        {% endfor %}
+        {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+          <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
-    </div>
-    <!------------------- login form -------------------------->
-  </form>
-  <script scr = "{% static 'home/assets/js/loginPage.js' %}"></script>  
-</body>
+      <!------------------- login form -------------------------->
+    </form>
+    <script scr="{% static 'home/assets/js/loginPage.js' %}"></script>
+  </body>
 </html>

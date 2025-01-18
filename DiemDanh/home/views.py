@@ -8,7 +8,9 @@ from django.template import loader
 def get_home(request):
     return render(request, 'home/index.html')
 
-def loginPage(request):
+
+# dat ten get_ cho no dong bo voi cac ham khac
+def get_login(request):
     if request.method == 'POST':
         username = request.POST.get('un')
         password = request.POST.get('pw')
@@ -29,3 +31,11 @@ def loginPage(request):
 
 def get_course(request):
     return render(request, 'home/courses.html')
+
+def get_profile(request):
+    return render(request, 'home/profile.html')
+
+def get_history(request):
+    return render(request, 'home/history.html')
+
+    
