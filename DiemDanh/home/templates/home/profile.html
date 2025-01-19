@@ -1,5 +1,7 @@
 {%extends "masterPage.html" %}
 
+{%load static%}
+
 {%block title%}
     Courses UTH
 {%endblock%}
@@ -57,11 +59,11 @@
       <div class="col-12">
         <div class="card mb-6">
           <div class="user-profile-header-banner">
-            <img src="../../assets/img/pages/profile-banner.png" alt="Banner image" class="rounded-top">
+            <img src="" alt="Banner image" class="rounded-top">
           </div>
           <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-8">
             <div class="flex-shrink-0 mt-1 mx-sm-0 mx-auto">
-              <img src="../../assets/img/avatars/1.png" alt="user image" class="d-block h-auto ms-0 ms-sm-6 rounded-3 user-profile-img">
+              <img src="{% static 'home/assets/img/avatars/6.png' %}" alt="user image" class="d-block h-auto ms-0 ms-sm-6 rounded-3 user-profile-img">
             </div>
             <div class="flex-grow-1 mt-3 mt-lg-5">
               <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
@@ -95,15 +97,15 @@
             <ul class="list-unstyled my-3 py-1">
               <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-user"></i><span class="fw-medium mx-2">Full Name:</span> <span>Nguyen Hoai Linh</span></li>
               <li class="d-flex align-items-center mb-4"><i class='bx bx-id-card' ></i></i><span class="fw-medium mx-2">Student ID:</span> <span>0000000000</span></li>
-              <li class="d-flex align-items-center mb-4"><i class='bx bx-calendar'></i></i><span class="fw-medium mx-2">Year</span> <span>Developer</span></li>
-              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-flag"></i><span class="fw-medium mx-2">Country:</span> <span>USA</span></li>
-              <li class="d-flex align-items-center mb-2"><i class="icon-base bx bx-detail"></i><span class="fw-medium mx-2">Languages:</span> <span>English</span></li>
+              <li class="d-flex align-items-center mb-4"><i class='bx bx-calendar'></i></i><span class="fw-medium mx-2">Birthday</span> <span>dd/mm/yy</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-flag"></i><span class="fw-medium mx-2">Gender:</span> <span>Male</span></li>
+              <li class="d-flex align-items-center mb-2"><i class="icon-base bx bx-detail"></i><span class="fw-medium mx-2">Class:</span> <span>CN2302D</span></li>
             </ul>
             <small class="card-text text-uppercase text-body-secondary small">Contacts</small>
             <ul class="list-unstyled my-3 py-1">
-              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Contact:</span> <span>(123) 456-7890</span></li>
-              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-chat"></i><span class="fw-medium mx-2">Skype:</span> <span>john.doe</span></li>
-              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-envelope"></i><span class="fw-medium mx-2">Email:</span> <span>john.doe@example.com</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Contact:</span> <span>0348117701</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Parents' phones:</span> <span>0348117701</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-envelope"></i><span class="fw-medium mx-2">Email:</span> <span>linh@example.com</span></li>
             </ul>
           </div>
         </div>

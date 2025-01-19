@@ -1,0 +1,79 @@
+{%extends "masterPage.html" %} {%block title%} Courses UTH {%endblock%}
+
+<!-- MENU -->
+
+<!-- Dashboards -->
+{% block menuDashboards %} {%include '../includes/leftmenu/dashboards.html'%}
+{%endblock %}
+
+<!-- Layouts -->
+
+{% block layouts %} {% endblock %}
+<!-- Front Pages -->
+
+{% block frontPages %} {% endblock %}
+<!-- Apps & Pages -->
+
+{% block appAndPg %} {% endblock %}
+<!-- Components -->
+
+{% block components %} {% endblock %}
+
+<!-- Forms & Tables -->
+
+{% block formAndTb %} {% endblock %}
+<!-- Misc -->
+
+{% block Misc %} {% endblock %}
+
+<!-- NAVBAR -->
+{% block user %} {%include "../includes/navbar/user.html" %} {% endblock %}
+{%comment %}
+<!-- search -->
+{%block search %} {% endblock %} {% endcomment %}
+
+<!-- CONTENT -->
+{%block content%} 
+<div class="card">
+    <h5 class="card-header pb-0 text-md-start text-center">History Attendence</h5>
+    <div class="card-datatable text-nowrap">
+      <div id="DataTables_Table_0_wrapper" class="dt-container dt-bootstrap5 dt-empty-footer"><div class="row mx-3 my-0 justify-content-between"><div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto"><div class="dt-length"><label for="dt-length-0">Show<select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select" id="dt-length-0"><option value="7">7</option><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select>entries</label></div></div><div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto mt-0"><div class="dt-search mt-md-6 mt-0"><label for="dt-search-0">Search:</label><input type="search" class="form-control ms-4" id="dt-search-0" placeholder="" aria-controls="DataTables_Table_0"></div></div></div><div class="justify-content-between dt-layout-table"><div class="d-md-flex justify-content-between align-items-center dt-layout-full table-responsive"><div id="DataTables_Table_0_processing" class="dt-processing card" role="status" style="display: none;"><div><div></div><div></div><div></div><div></div></div></div><table class="datatables-ajax table table-bordered dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info" style="width: 100%;"><colgroup><col data-dt-column="0" style="width: 247.706px;"><col data-dt-column="1" style="width: 278.625px;"><col data-dt-column="2" style="width: 334.406px;"><col data-dt-column="3" style="width: 188.963px;"><col data-dt-column="4" style="width: 176.588px;"><col data-dt-column="5" style="width: 161.738px;"></colgroup>
+        <thead>
+            <tr>
+              <th data-dt-column="0" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc dt-ordering-asc" aria-sort="ascending" aria-label="Full name: Activate to invert sorting" tabindex="0">
+                <span class="dt-column-title" role="button">Student Name</span>
+                <span class="dt-column-order"></span>
+              </th>
+              <th data-dt-column="1" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc" aria-label="Email: Activate to sort" tabindex="0">
+                <span class="dt-column-title" role="button">Class</span>
+                <span class="dt-column-order"></span>
+              </th>
+              <th data-dt-column="2" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc" aria-label="Position: Activate to sort" tabindex="0">
+                <span class="dt-column-title" role="button">Check-in Time</span>
+                <span class="dt-column-order"></span>
+              </th>
+              <th data-dt-column="3" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc" aria-label="Office: Activate to sort" tabindex="0">
+                <span class="dt-column-title" role="button">Check-out Time</span>
+                <span class="dt-column-order"></span>
+              </th>
+              <th data-dt-column="4" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc dt-type-date" aria-label="Start date: Activate to sort" tabindex="0">
+                <span class="dt-column-title" role="button">Attendance Date</span>
+                <span class="dt-column-order"></span>
+              </th>
+              <th data-dt-column="5" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc dt-type-numeric" aria-label="Salary: Activate to sort" tabindex="0">
+                <span class="dt-column-title" role="button">Duration</span>
+                <span class="dt-column-order"></span>
+              </th>
+            </tr>
+          </thead>
+          
+        {% comment %} {% for item in history %} {% endcomment %}
+        <tbody><tr><td class="sorting_1">Airi Satou</td><td>airi@example.com</td><td>Accountant</td><td>Tokyo</td><td class="dt-type-date">2008/11/28</td><td class="dt-type-numeric">$162,700</td></tr><tr><td class="sorting_1">Angelica Ramos</td><td>angelica@example.com</td><td>Chief Executive Officer (CEO)</td><td>London</td><td class="dt-type-date">2009/10/09</td><td class="dt-type-numeric">$1,200,000</td></tr><tr><td class="sorting_1">Ashton Cox</td><td>ashton@example.com</td><td>Junior Technical Author</td><td>San Francisco</td><td class="dt-type-date">2009/01/12</td><td class="dt-type-numeric">$86,000</td></tr><tr><td class="sorting_1">Bradley Greer</td><td>bradley@example.com</td><td>Software Engineer</td><td>London</td><td class="dt-type-date">2012/10/13</td><td class="dt-type-numeric">$132,000</td></tr><tr><td class="sorting_1">Brenden Wagner</td><td>brenden@example.com</td><td>Software Engineer</td><td>San Francisco</td><td class="dt-type-date">2011/06/07</td><td class="dt-type-numeric">$206,850</td></tr><tr><td class="sorting_1">Brielle Williamson</td><td>brielle@example.com</td><td>Integration Specialist</td><td>New York</td><td class="dt-type-date">2012/12/02</td><td class="dt-type-numeric">$372,000</td></tr><tr><td class="sorting_1">Bruno Nash</td><td>bruno@example.com</td><td>Software Engineer</td><td>London</td><td class="dt-type-date">2011/05/03</td><td class="dt-type-numeric">$163,500</td></tr><tr><td class="sorting_1">Caesar Vance</td><td>caesar@example.com</td><td>Pre-Sales Support</td><td>New York</td><td class="dt-type-date">2011/12/12</td><td class="dt-type-numeric">$106,450</td></tr><tr><td class="sorting_1">Cara Stevens</td><td>cara@example.com</td><td>Sales Assistant</td><td>New York</td><td class="dt-type-date">2011/12/06</td><td class="dt-type-numeric">$145,600</td></tr><tr><td class="sorting_1">Cedric Kelly</td><td>cedric@example.com</td><td>Senior Javascript Developer</td><td>Edinburgh</td><td class="dt-type-date">2012/03/29</td><td class="dt-type-numeric">$433,060</td></tr></tbody>
+        {% comment %} {% endfor %} {% endcomment %}
+      <tfoot></tfoot></table></div></div><div class="row mx-3 justify-content-between"><div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto"><div class="dt-info" aria-live="polite" id="DataTables_Table_0_info" role="status">Showing 1 to 10 of 57 entries</div></div><div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto mt-0"><div class="dt-paging"><nav aria-label="pagination"><ul class="pagination"><li class="dt-paging-button page-item disabled"><button class="page-link previous" role="link" type="button" aria-controls="DataTables_Table_0" aria-disabled="true" aria-label="Previous" data-dt-idx="previous" tabindex="-1"><i class="icon-base bx bx-chevron-left scaleX-n1-rtl icon-sm"></i></button></li><li class="dt-paging-button page-item active"><button class="page-link" role="link" type="button" aria-controls="DataTables_Table_0" aria-current="page" data-dt-idx="0">1</button></li><li class="dt-paging-button page-item"><button class="page-link" role="link" type="button" aria-controls="DataTables_Table_0" data-dt-idx="1">2</button></li><li class="dt-paging-button page-item"><button class="page-link" role="link" type="button" aria-controls="DataTables_Table_0" data-dt-idx="2">3</button></li><li class="dt-paging-button page-item"><button class="page-link" role="link" type="button" aria-controls="DataTables_Table_0" data-dt-idx="3">4</button></li><li class="dt-paging-button page-item"><button class="page-link" role="link" type="button" aria-controls="DataTables_Table_0" data-dt-idx="4">5</button></li><li class="dt-paging-button page-item"><button class="page-link" role="link" type="button" aria-controls="DataTables_Table_0" data-dt-idx="5">6</button></li><li class="dt-paging-button page-item"><button class="page-link next" role="link" type="button" aria-controls="DataTables_Table_0" aria-label="Next" data-dt-idx="next"><i class="icon-base bx bx-chevron-right scaleX-n1-rtl icon-sm"></i></button></li></ul></nav></div></div></div></div>
+    </div>
+  </div>
+  {%endblock%}
+
+<!-- Footer -->
+{% block footer %} {%include "../includes/footer.html" %} {% endblock %}

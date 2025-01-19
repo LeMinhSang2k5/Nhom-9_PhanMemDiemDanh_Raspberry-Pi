@@ -12,5 +12,6 @@ urlpatterns = [
     path('login/', views.get_login, name='login'),
     path('history/', views.get_history, name='history'),
     path('profile/', views.get_profile, name='profile'),
+    
 
 ]

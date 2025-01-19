@@ -11237,6 +11237,7 @@ button.list-group-item-gray.active {
 }
 
 .navbar {
+  posion: fixed;
   z-index: 2;
 }
 .navbar .dropdown:focus,
@@ -24650,7 +24651,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 }
 
 .layout-navbar {
-  position: relative;
+  position: fixed;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   height: 3.875rem;
@@ -24844,6 +24845,10 @@ html:not(.layout-footer-fixed) .content-wrapper {
 }
 .layout-navbar-fixed .container-p-y:not([class^=pt-]):not([class*=" pt-"]) {
   padding-top: 1.75rem !important;
+}
+
+#layout-navbar{
+  position: fixed;
 }
 
 @media (min-width: 1200px) {

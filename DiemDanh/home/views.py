@@ -6,7 +6,7 @@ from django.template import loader
 
 # Create your views here.
 def get_home(request):
-    return render(request, 'home/index.html')
+    return render(request, 'home/home.html')
 
 
 # dat ten get_ cho no dong bo voi cac ham khac
