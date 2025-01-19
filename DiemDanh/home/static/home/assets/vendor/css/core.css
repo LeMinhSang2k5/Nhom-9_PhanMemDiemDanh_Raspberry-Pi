@@ -11237,9 +11237,10 @@ button.list-group-item-gray.active {
 }
 
 .navbar {
-  posion: fixed;
+  position: sticky;
   z-index: 2;
 }
+
 .navbar .dropdown:focus,
 .navbar .dropdown-toggle:focus {
   outline: 0;
@@ -24848,7 +24849,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 }
 
 #layout-navbar{
-  position: fixed;
+  position: sticky;
 }
 
 @media (min-width: 1200px) {
