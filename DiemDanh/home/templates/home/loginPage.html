@@ -1,88 +1,57 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="{% static 'home/assets/css/styles.css' %}" />
-    <link
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://gtvthcm.edu.vn/wp-content/uploads/2024/04/Logo-GTVT.png"
-    />
-  </head>
-  <body style="background-image: url('{% static 'home/assets/img/home_bg.jpg' %}'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;">
-      
-    <form method="POST" class="wrapper">
-      {% csrf_token %}
-      <!------------------- login form -------------------------->
-      <div class="login-container" id="login">
-        <header>Đăng nhập</header>
 
-        <div class="input-box">
-          <input
-            type="text"
-            class="input-field"
-            id="un"
-            name="un"
-            placeholder="Tên đăng nhập"
-            required
-            autofocus
-          />
-          <i class="bx bx-user"></i>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="{% static 'home/assets/css/styles.css' %}" />
+  <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="https://gtvthcm.edu.vn/wp-content/uploads/2024/04/Logo-GTVT.png" />
+</head>
 
-        <div class="input-box">
-          <input
-            type="password"
-            class="input-field"
-            id="pw"
-            name="pw"
-            placeholder="Mật khẩu"
-            required
-            autocomplete="off"
-          />
-          <i class="bx bx-lock-alt"></i>
-        </div>
+<body
+  style="background-image: url('{% static 'home/assets/img/home_bg.jpg' %}'); background-size: cover;background-position: center;background-repeat: no-repeat; min-height: 100vh;">
 
-        <div class="input-box">
-          <input
-            type="submit"
-            id="btndangnhap"
-            name="btndangnhap"
-            class="submit"
-            value="Đăng nhập"
-          />
-        </div>
+  <form method="POST" class="wrapper">
+    {% csrf_token %}
+    <!------------------- login form -------------------------->
+    <div class="login-container" id="login">
+      <header>Đăng nhập</header>
 
-        <div class="one">
-          <input type="checkbox" id="login-check" />
-          <label for="login-check">Lưu thông tin</label>
-        </div>
-
-        {% if messages %}
-        <div class="messages">
-          {% for message in messages %}
-          <p>{{ message }}</p>
-          {% endfor %}
-        </div>
-        {% endif %}
+      <div class="input-box">
+        <input type="text" class="input-field" id="un" name="un" placeholder="Tên đăng nhập" required autofocus />
+        <i class="bx bx-user"></i>
       </div>
-      <!------------------- login form -------------------------->
-    </form>
-    <script scr="{% static 'home/assets/js/loginPage.js' %}"></script>
-  </body>
+
+      <div class="input-box">
+        <input type="password" class="input-field" id="pw" name="pw" placeholder="Mật khẩu" required
+          autocomplete="off" />
+        <i class="bx bx-lock-alt"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="submit" id="btndangnhap" name="btndangnhap" class="submit" value="Đăng nhập" />
+      </div>
+
+      <div class="one">
+        <input type="checkbox" id="login-check" />
+        <label for="login-check">Lưu thông tin</label>
+      </div>
+
+      {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <!------------------- login form -------------------------->
+  </form>
+  <script scr="{% static 'home/assets/js/loginPage.js' %}"></script>
+</body>
+
 </html>

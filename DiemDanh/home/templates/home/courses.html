@@ -34,168 +34,200 @@
 
 <!-- CONTENT -->
 {%block content%}
- <!-- User Profile Content -->
- <div class="row">
-    <div class="col-xl-4 col-lg-5 col-md-5">
-      <!-- About User -->
-      <div class="card mb-6">
-        <div class="card-body">
-          <small class="card-text text-uppercase text-body-secondary small">About</small>
-          <ul class="list-unstyled my-3 py-1">
-            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-user"></i><span class="fw-medium mx-2">Full Name:</span> <span>Nguyen Hoai Linh</span></li>
-            <li class="d-flex align-items-center mb-4"><i class='bx bx-id-card' ></i></i><span class="fw-medium mx-2">Student ID:</span> <span>0000000000</span></li>
-            <li class="d-flex align-items-center mb-4"><i class='bx bx-calendar'></i></i><span class="fw-medium mx-2">Birthday</span> <span>dd/mm/yy</span></li>
-            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-flag"></i><span class="fw-medium mx-2">Gender:</span> <span>Male</span></li>
-            <li class="d-flex align-items-center mb-2"><i class="icon-base bx bx-detail"></i><span class="fw-medium mx-2">Class:</span> <span>CN2302D</span></li>
-          </ul>
-          <small class="card-text text-uppercase text-body-secondary small">Contacts</small>
-          <ul class="list-unstyled my-3 py-1">
-            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Contact:</span> <span>0348117701</span></li>
-            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Parents' phones:</span> <span>0348117701</span></li>
-            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-envelope"></i><span class="fw-medium mx-2">Email:</span> <span>linh@example.com</span></li>
-          </ul>
-        </div>
-      </div>
-      <!--/ About User -->
-    </div>
-    <style>
-        .calendar {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
+<!-- User Profile Content -->
+<div class="row">
+  <div class="col-xl-4 col-lg-5 col-md-5">
+    <!-- About User -->
+    <div class="card mb-6">
+      <div class="card-body">
+        <small class="card-text text-uppercase text-body-secondary small">About</small>
+        <ul class="list-unstyled my-3 py-1">
+          {% for item in teacher %}
+          <li class="d-flex align-items-center mb-4">
+            <i class="icon-base bx bx-user"></i>
+            <span class="fw-medium mx-2">Full Name:</span>
+            <span>{{ item.name_teacher }}</span>
+          </li>
+          <li class="d-flex align-items-center mb-4">
+            <i class='bx bx-id-card'></i>
+            <span class="fw-medium mx-2">Teacher ID:</span>
+            <span>{{ item.id }}</span>
+          </li>
+          <li class="d-flex align-items-center mb-4">
+            <i class='bx bx-calendar'></i>
+            <span class="fw-medium mx-2">Birthday:</span>
+            <span>{{ item.birth_day|date:"d/m/Y" }}</span>
+          </li>
+          <li class="d-flex align-items-center mb-4">
+            <i class="icon-base bx bx-flag"></i>
+            <span class="fw-medium mx-2">Gender:</span>
+            <span>{{ item.gender }}</span>
+          </li>
+          {% empty %}
+          <li class="text-center">Không có dữ liệu giáo viên</li>
+          {% endfor %}
+        </ul>
 
-        .col-xl-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-            padding: 0 15px;
-        }
-    
-        .month {
-            background: #ffffff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-        }
-    
-        .month h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-    
-        .weekdays {
-            background: #34495e;
-            color: white;
-            padding: 10px 0;
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            text-align: center;
-        }
-    
-        .days {
-            padding: 10px;
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-        }
-    
-        .days div {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-    
-        .days div:hover {
-            background: #f0f0f0;
-        }
-    
-        .today {
-            background: #3498db !important;
-            color: white;
-        }
-    
-        .prev-date, .next-date {
-            opacity: 0.5;
-        }
-    </style> 
-        <!-- Calendar -->
-        <div class="col-xl-6">
-            <div class="card mb-6">
-              <div class="card-body">
-                <div class="calendar">
-                    <div class="month">
-                        <h1>Tháng 2 2025</h1>
-                    </div>
-                
-                    <div class="weekdays">
-                        <div>CN</div>
-                        <div>T2</div>
-                        <div>T3</div>
-                        <div>T4</div>
-                        <div>T5</div>
-                        <div>T6</div>
-                        <div>T7</div>
-                    </div>
-                
-                    <div class="days">
-                        <div class="prev-date">26</div>
-                        <div class="prev-date">27</div>
-                        <div class="prev-date">28</div>
-                        <div class="prev-date">29</div>
-                        <div class="prev-date">30</div>
-                        <div class="prev-date">31</div>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-                        <div>10</div>
-                        <div class="today">11</div>
-                        <div>12</div>
-                        <div>13</div>
-                        <div>14</div>
-                        <div>15</div>
-                        <div>16</div>
-                        <div>17</div>
-                        <div>18</div>
-                        <div>19</div>
-                        <div>20</div>
-                        <div>21</div>
-                        <div>22</div>
-                        <div>23</div>
-                        <div>24</div>
-                        <div>25</div>
-                        <div>26</div>
-                        <div>27</div>
-                        <div>28</div>
-                        <div class="next-date">1</div>
-                        <div class="next-date">2</div>
-                        <div class="next-date">3</div>
-                        <div class="next-date">4</div>
-                        <div class="next-date">5</div>
-                        <div class="next-date">6</div>
-                        <div class="next-date">7</div>
-                        <div class="next-date">8</div>
-                    </div>
-                </div>
-              </div>
-            </div>
+        <small class="card-text text-uppercase text-body-secondary small">Contacts</small>
+        <ul class="list-unstyled my-3 py-1">
+          {% for item in teacher %}
+          <li class="d-flex align-items-center mb-4">
+            <i class="icon-base bx bx-phone"></i>
+            <span class="fw-medium mx-2">Contact:</span>
+            <span>{{ item.contact|default:"-" }}</span>
+          </li>
+          <li class="d-flex align-items-center mb-4">
+            <i class="icon-base bx bx-envelope"></i>
+            <span class="fw-medium mx-2">Email:</span>
+            <span>{{ item.email|default:"-" }}</span>
+          </li>
+          {% empty %}
+          <li class="text-center">Không có thông tin liên hệ</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!--/ About User -->
+  </div>
+  <style>
+    .calendar {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .col-xl-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 15px;
+    }
+
+    .month {
+      background: #ffffff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .month h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .weekdays {
+      background: #34495e;
+      color: white;
+      padding: 10px 0;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+    }
+
+    .days {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+
+    .days div {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .days div:hover {
+      background: #f0f0f0;
+    }
+
+    .today {
+      background: #3498db !important;
+      color: white;
+    }
+
+    .prev-date,
+    .next-date {
+      opacity: 0.5;
+    }
+  </style>
+  <!-- Calendar -->
+  <div class="col-xl-6">
+    <div class="card mb-6">
+      <div class="card-body">
+        <div class="calendar">
+          <div class="month">
+            <h1>{{ current_month }}</h1>
           </div>
 
-</div>
+          <div class="weekdays">
+            <div>CN</div>
+            <div>T2</div>
+            <div>T3</div>
+            <div>T4</div>
+            <div>T5</div>
+            <div>T6</div>
+            <div>T7</div>
+          </div>
+
+          <div class="days" id="calendar-days">
+            <!-- Days will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!--/ User Profile Content -->
+
+  <script>
+    function generateCalendar() {
+      const daysElement = document.getElementById('calendar-days');
+      const today = new Date();
+      const currentMonth = today.getMonth();
+      const currentYear = today.getFullYear();
+      const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+      const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
+      const prevLastDay = new Date(currentYear, currentMonth, 0).getDate();
+      const firstDayIndex = firstDayOfMonth.getDay();
+      const lastDayIndex = lastDayOfMonth.getDay();
+      const nextDays = 7 - lastDayIndex - 1;
+
+      let days = "";
+
+      // Previous month's days
+      for (let x = firstDayIndex; x > 0; x--) {
+        days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+      }
+
+      // Current month's days
+      for (let i = 1; i <= lastDayOfMonth.getDate(); i++) {
+        if (i === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+          days += `<div class="today">${i}</div>`;
+        } else {
+          days += `<div>${i}</div>`;
+        }
+      }
+
+      // Next month's days
+      for (let j = 1; j <= nextDays; j++) {
+        days += `<div class="next-date">${j}</div>`;
+      }
+
+      daysElement.innerHTML = days;
+    }
+
+    generateCalendar();
+  </script>
+
+</div>
+</div>
+<!--/ User Profile Content -->
 {%endblock%}
 
 <!-- Footer -->

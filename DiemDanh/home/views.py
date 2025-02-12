@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpResponse
 from django.template import loader
+from datetime import datetime
+from .models import history_attendance,teachers
 
 # Create your views here.
 def get_home(request):
@@ -30,12 +32,19 @@ def get_login(request):
     return render(request, 'home/loginPage.html')
 
 def get_course(request):
-    return render(request, 'home/courses.html')
+    today = datetime.today()
+    context = {
+        'current_month': today.strftime("%B %Y"),
+        'current_day': today.day,
+    }
+    return render(request, 'home/courses.html', context)
 
 def get_profile(request):
-    return render(request, 'home/profile.html')
+    teacher = teachers.objects.all()  # Lấy toàn bộ danh sách giáo viên
+    return render(request, 'home/profile.html', {'teacher': teacher})
 
 def get_history(request):
-    return render(request, 'home/history.html')
+    history = history_attendance.objects.all()  # Lấy tất cả bản ghi từ database
+    return render(request, 'home/history.html', {'history': history})
 
     
