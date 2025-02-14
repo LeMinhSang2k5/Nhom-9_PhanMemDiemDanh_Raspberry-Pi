@@ -22,8 +22,15 @@ def get_login(request):
             
             if user is not None:
                 login(request, user)
-                next_url = request.GET.get('next', 'home') 
-                return redirect(next_url)
+
+                # Kiểm tra quyền của user
+                if user.is_superuser:
+                    return redirect('/admin/')  # Admin vào trang admin
+                elif hasattr(user, 'userprofile') and user.userprofile.is_teacher:
+                    return redirect('/courses/')  # Giáo viên vào trang course
+                else:
+                    next_url = request.GET.get('course', 'home')  # User thường về home
+                    return redirect(next_url)
             else:
                 messages.error(request, 'Tên đăng nhập hoặc mật khẩu không đúng')
         else:
