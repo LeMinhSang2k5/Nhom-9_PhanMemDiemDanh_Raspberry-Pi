@@ -1,0 +1,124 @@
+{%extends "masterPage.html" %}
+
+{%load static%}
+
+{%block title%}
+Courses UTH
+{%endblock%}
+
+<!-- MENU -->
+
+<!-- Dashboards -->
+{% block menuDashboards %}
+{%include '../includes/leftmenu/dashboards.html'%}
+{% endblock %}
+
+<!-- Layouts -->
+
+{% block layouts %}
+{% endblock %}
+<!-- Front Pages -->
+
+{% block frontPages %}
+{% endblock %}
+<!-- Apps & Pages -->
+
+{% block appAndPg %}
+{% endblock %}
+<!-- Components -->
+
+{% block components %}
+{% endblock %}
+
+<!-- Forms & Tables -->
+
+{% block formAndTb %}
+{% endblock %}
+<!-- Misc -->
+
+{% block Misc %}
+{% endblock %}
+
+<!-- NAVBAR -->
+{% block user %}
+{%include "../includes/navbar/user.html" %}
+{% endblock %}
+
+{% block search %}
+{% endblock %}
+
+
+
+
+<!-- CONTENT -->
+{%block content%}
+
+<div class="card">
+    <h5 class="card-header pb-0 text-md-start text-center">Edit Profile</h5>
+    <div class="card-body" style="margin-top: 20px;">
+        <div class="row ">
+            <div class="col-xl-4 col-lg-5 col-md-5" style="margin: 30px 100px;">
+                <!-- <div id="defaultFormControlHelp" class="form-text">We'll never share your details with anyone else.</div> -->
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Change
+                        Avatar</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Full Name</label>
+                    <input type="text" class="form-control" id="defaultFormControlInput" placeholder="Nguyen Hoai Linh"
+                        aria-describedby="defaultFormControlHelp">
+                </div>
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Teacher ID</label>
+                    <input type="text" class="form-control" id="defaultFormControlInput" placeholder="010122"
+                        aria-describedby="defaultFormControlHelp">
+                </div>
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Birthday</label>
+                    <input class="form-control" type="date" value="2021-06-18" id="html5-date-input">
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-5" style="margin-top: 61px;">
+                <!-- <div id="defaultFormControlHelp" class="form-text">We'll never share your details with anyone else.</div> -->
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Gender</label>
+                    <div class="form-check form-check-inline mt-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Femle</label>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Contact</label>
+                    <input type="text" class="form-control" id="defaultFormControlInput" placeholder="0123456789"
+                        aria-describedby="defaultFormControlHelp">
+                </div>
+                <div>
+                    <label for="defaultFormControlInput" class="form-label" style="margin-top: 20px;">Email</label>
+                    <input type="text" class="form-control" id="defaultFormControlInput" placeholder="web@gmail.com"
+                        aria-describedby="defaultFormControlHelp">
+                </div>
+            </div>
+        </div>
+        <div style="background-color:#91979f 20px; text-align: center;">
+    
+                <button type="button" class="btn btn-label-secondary">Discard</button>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+    </div>
+</div>
+{%endblock%}
+
+
+
+<!-- Footer -->
+{% block footer %}
+{%include "../includes/footer.html" %}
+{% endblock %}

@@ -40,14 +40,7 @@
     <div id="DataTables_Table_0_wrapper" class="dt-container dt-bootstrap5 dt-empty-footer">
       <div class="row mx-3 my-0 justify-content-between">
         <div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto">
-          <div class="dt-length"><label for="dt-length-0">Show<select name="DataTables_Table_0_length"
-                aria-controls="DataTables_Table_0" class="form-select" id="dt-length-0">
-                <option value="7">7</option>
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>entries</label></div>
+          <button id="print-report" class="btn btn-primary">🖨️ In Báo Cáo</button>
         </div>
         <div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto mt-0">
           <div class="dt-search mt-md-6 mt-0"><label for="dt-search-0">Search:</label><input type="search"
@@ -102,16 +95,11 @@
                   <span class="dt-column-title" role="button">Check-in Time</span>
                   <span class="dt-column-order"></span>
                 </th>
-                <th data-dt-column="3" rowspan="1" colspan="1" class="dt-orderable-asc dt-orderable-desc"
-                  aria-label="Office: Activate to sort" tabindex="0">
-                  <span class="dt-column-title" role="button">Check-out Time</span>
-                  <span class="dt-column-order"></span>
-                </th>
 
                 <th data-dt-column="5" rowspan="1" colspan="1"
                   class="dt-orderable-asc dt-orderable-desc dt-type-numeric" aria-label="Salary: Activate to sort"
                   tabindex="0">
-                  <span class="dt-column-title" role="button">Duration</span>
+                  <span class="dt-column-title" role="button">Status</span>
                   <span class="dt-column-order"></span>
                 </th>
               </tr>
@@ -125,7 +113,6 @@
                 <td>{{ item.class_name }}</td>
                 <td class="dt-type-date">{{ item.date_attendance }}</td>
                 <td>{{ item.checkin_time|default:"-" }}</td>
-                <td>{{ item.checkout_time|default:"-" }}</td>
                 <td class="dt-type-status">{{ item.get_status_display }}</td>
               </tr>
               {% empty %}
