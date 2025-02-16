@@ -1,50 +1,74 @@
 {% load static %}
-<li class="nav-item navbar-dropdown dropdown-user dropdown">
-  <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
-    <div class="avatar avatar-online">
-      <img src="{% static 'home/assets/img/avatars/1.png' %} " alt class="w-px-40 h-auto rounded-circle" />
-    </div>
-  </a>
-  <ul class="dropdown-menu dropdown-menu-end">
-    <li>
-      <a class="dropdown-item" href="#">
-        <div class="d-flex">
-          <div class="flex-shrink-0 me-3">
-            <div class="avatar avatar-online">
-              <img src="{% static 'home/assets/img/avatars/1.png' %}" alt class="w-px-40 h-auto rounded-circle" />
-            </div>
-          </div>
-          <div class="flex-grow-1">
-            <h6 class="mb-0">John</h6>
-            <small class="text-muted">Admin</small>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <div class="dropdown-divider my-1"></div>
-    </li>
-    <li>
-      <a class="dropdown-item" href="profile">
-        <i class="bx bx-user bx-md me-3"></i><span>Profile</span>
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="#">
-        <i class="bx bx-cog bx-md me-3"></i><span>Settings</span>
-      </a>
-    </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Các phần tử khác của navbar nếu có -->
+    <ul class="navbar-nav ms-auto">
 
-    <li>
-      <div class="dropdown-divider my-1"></div>
-    </li>
-    <li>
-      <a class="dropdown-item" href="../login">
-        <i class="bx bx-power-off bx-md me-3"></i><span>Log Out</span>
-      </a>
-    </li>
-  </ul>
-</li>
-<div>
-  <p class="mb-0 col-xl-6">John Doe</p>
+      <!-- Nút thông báo -->
+      {% comment %} <li class="nav-item me-3">
+        <a class="nav-link position-relative" href="{% url 'notifications' %}">
+          <i class="bx bx-bell bx-md"></i>
+          <!-- Badge số thông báo, bạn có thể render số lượng thông báo động từ backend -->
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            3
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </a>
+      </li> {% endcomment %}
+
+      <!-- Dropdown user -->
+      <li class="nav-item navbar-dropdown dropdown-user dropdown">
+        <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
+          <div class="avatar avatar-online">
+            <img src="{% static 'home/assets/img/avatars/1.png' %}" alt class="w-px-40 h-auto rounded-circle" />
+          </div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <a class="dropdown-item" href="#">
+              <div class="d-flex">
+                <div class="flex-shrink-0 me-3">
+                  <div class="avatar avatar-online">
+                    <img src="{% static 'home/assets/img/avatars/1.png' %}" alt class="w-px-40 h-auto rounded-circle" />
+                  </div>
+                </div>
+                <div class="flex-grow-1">
+                  <!-- Render tên user động từ database -->
+                  <h6 class="mb-0">{{ user.username }}</h6>
+                  <!-- Nếu muốn hiển thị tên đầy đủ -->
+                  <small class="text-muted">{{ user.get_full_name }}</small>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <div class="dropdown-divider my-1"></div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{% static '../profile' %}">
+              <i class="bx bx-user bx-md me-3"></i><span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <i class="bx bx-cog bx-md me-3"></i><span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <div class="dropdown-divider my-1"></div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{% static '../login' %}">
+              <i class="bx bx-power-off bx-md me-3"></i><span>Log Out</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hiển thị tên user ở nơi khác nếu cần -->
+<div class="mt-2">
+  <p class="mb-0 col-xl-6">Chào, {{ user.username }}!</p>
 </div>

@@ -54,42 +54,58 @@ Courses UTH
 {%block content%}
 <div class="container-xxl flex-grow-1 container-p-y">
 
+  {% load static %}
+
   <!-- Header -->
   <div class="row">
     <div class="col-12">
       <div class="card mb-6">
-        <div class="user-profile-header-banner">
-          <img src="" alt="" class="rounded-top">
-        </div>
-        <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-8">
+        
+        <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-8" style="margin-top: 20px;">
+          
+          <!-- Avatar -->
           <div class="flex-shrink-0 mt-1 mx-sm-0 mx-auto">
-            <img src="{% static 'home/assets/img/avatars/6.png' %}" alt="user image"
-              class="d-block h-auto ms-0 ms-sm-6 rounded-3 user-profile-img">
+            <img src="{% static 'home/assets/img/avatars/1.png' %}" 
+                 alt="User Image"
+                 class="d-block h-auto ms-0 ms-sm-6 rounded-3 user-profile-img">
           </div>
+  
+          <!-- Thông tin người dùng -->
           <div class="flex-grow-1 mt-3 mt-lg-5">
-            <div
-              class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
+            <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
+              
               <div class="user-profile-info">
-                <h4 class="mb-2 mt-lg-7">Linh</h4>
-                <ul
-                  class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4 mt-4">
-                  <li class="list-inline-item"><i class="icon-base bx bx-palette me-2 align-top"></i><span
-                      class="fw-medium">UX Designer</span></li>
-                  <li class="list-inline-item"><i class="icon-base bx bx-map me-2 align-top"></i><span
-                      class="fw-medium">Vatican City</span></li>
-                  <li class="list-inline-item"><i class="icon-base bx bx-calendar me-2 align-top"></i><span
-                      class="fw-medium"> Joined April 2021</span></li>
+                <h4 class="mb-2 mt-lg-7">{{ user.get_full_name }}</h4>
+                <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4 mt-4">
+                  <li class="list-inline-item">
+                    <i class="icon-base bx bx-palette me-2 align-top"></i>
+                    <span class="fw-medium">{{ user.job_title|default:"Teacher" }}</span>
+                  </li>
+                  <li class="list-inline-item">
+                    <i class="icon-base bx bx-map me-2 align-top"></i>
+                    <span class="fw-medium">{{ user.location|default:"No Data" }}</span>
+                  </li>
+                  <li class="list-inline-item">
+                    <i class="icon-base bx bx-calendar me-2 align-top"></i>
+                    <span class="fw-medium">Joined {{ user.date_joined|date:"F Y" }}</span>
+                  </li>
                 </ul>
               </div>
-              <a href="../profile-edit" class="btn btn-primary mb-1"> <i
-                  class="icon-base bx bx-edit-alt icon-sm me-2"></i>Edit </a>
+  
+              <!-- edit -->
+              <a href="{% static '../profile-edit' %}" class="btn btn-primary mb-1">
+                <i class="icon-base bx bx-edit-alt icon-sm me-2"></i> Edit
+              </a>
+  
             </div>
           </div>
         </div>
+  
       </div>
     </div>
   </div>
   <!--/ Header -->
+  
   <!-- User Profile Content -->
   <div class="row">
     <div class="col-xl-4 col-lg-5 col-md-5">

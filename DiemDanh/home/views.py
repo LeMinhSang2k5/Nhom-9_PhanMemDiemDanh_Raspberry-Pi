@@ -8,6 +8,7 @@ from django.http import StreamingHttpResponse
 from django.shortcuts import render 
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponse
 from django.template import loader
@@ -141,6 +142,7 @@ def get_login(request):
 
     return render(request, 'home/loginPage.html')
 
+@login_required(login_url='home/loginPage.html')
 def get_home(request):
     today = datetime.today()
     context = {

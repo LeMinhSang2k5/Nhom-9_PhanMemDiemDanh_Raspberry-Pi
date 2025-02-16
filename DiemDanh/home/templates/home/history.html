@@ -40,7 +40,7 @@
     <div id="DataTables_Table_0_wrapper" class="dt-container dt-bootstrap5 dt-empty-footer">
       <div class="row mx-3 my-0 justify-content-between">
         <div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto">
-          <button id="print-report" class="btn btn-primary">🖨️ In Báo Cáo</button>
+          <button id="print-report" class="btn btn-primary">🖨️ File excel</button>
         </div>
         <div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto mt-0">
           <div class="dt-search mt-md-6 mt-0"><label for="dt-search-0">Search:</label><input type="search"
@@ -106,7 +106,7 @@
             </thead>
 
             <tbody>
-              {% for item in historys %}
+              {% for item in history %}
               <tr>
                 <td class="sorting_1">{{ item.student_name }}</td>
                 <td>{{ item.student_id }}</td>
