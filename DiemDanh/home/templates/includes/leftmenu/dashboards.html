@@ -1,3 +1,4 @@
+{% load static %}
 <li class="menu-item active open" data-id="dashboard">
   <a href="/.." class="menu-link">
     <i class="menu-icon tf-icons bx bx-home-smile"></i>
@@ -13,7 +14,7 @@
 </li>
 
 <li class="menu-item" data-id="attendance">
-  <a href="#" class="menu-link">
+  <a href="{% static '../face_recognition' %}" class="menu-link">
     <i class="bx bxs-camera-home"></i>
     <div class="text-truncate">Attendance</div>
   </a>
