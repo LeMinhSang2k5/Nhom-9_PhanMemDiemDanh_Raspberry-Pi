@@ -30,4 +30,6 @@ urlpatterns = [
     path('profile/', home.get_profile, name='profile'),
     path('profile-edit/', home.get_profileEdit, name='profile-edit'),
     path('history/', home.get_history, name='history'),
+    path('face_recognition/', home.get_face_recognition, name='face_recognition'), 
+    path('video_feed/', home.video_feed, name="video_feed"),
 ]
